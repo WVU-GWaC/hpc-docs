@@ -1,1 +1,10 @@
-site_name: My Docs
+site_name: "HPC Docs | Center for Gravitational Waves and Cosmology"
+site_description: ""
+site_url: "https://gwac-docs.readthedocs.io/"
+
+repo_url: https://github.com/WVU-GWaC/hpc-docs
+
+theme: readthedocs
+
+nav:
+  - Home: index.md
