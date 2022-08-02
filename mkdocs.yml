@@ -4,7 +4,7 @@ site_url: "https://gwac-docs.readthedocs.io/"
 
 repo_url: https://github.com/WVU-GWaC/hpc-docs
 
-theme: readthedocs
+theme: material
 
 markdown_extensions:
   - pymdownx.arithmatex:
