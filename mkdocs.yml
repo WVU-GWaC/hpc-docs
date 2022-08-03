@@ -1,19 +1,74 @@
-site_name: "HPC Docs | Center for Gravitational Waves and Cosmology"
+site_name: "Documentation Hub | Center for Gravitational Waves and Cosmology"
 site_description: ""
 site_url: "https://gwac-docs.readthedocs.io/"
 
 repo_url: https://github.com/WVU-GWaC/hpc-docs
+edit_uri: ""
 
-theme: material
+theme:
+  name: material
+  favicon: 'assets/favicon.ico'
+  logo: 'assets/logo.svg'
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - navigation.instant
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+#extra_css:
+#  - stylesheets/extra.css
 
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/gwacwvu
+      name: "GWaC @ WVU on Twitter"
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/WVU-GWaC
+      name: "GWaC on GitHub"
+  social:
+    - icon: fontawesome/brands/slack
+      link: https://join.slack.com/t/centerforgrav-t2i8767/shared_invite/zt-1dkp3uhoj-kwRzBjZ1I4Z0svQX3969kw
+      name: "GWaC on Slack"
+
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+copyright: Copyright &copy; 2022 Center for Gravitational Waves and Cosmology @ West Virginia University
+
 nav:
   - Home: index.md
+  - Quick Start: quick-start.md
+  - Support: https://support.nanograv.org/desk
