@@ -20,7 +20,7 @@ Due to the internal openness of our data services and size limitations, digital 
 
 Whenever a user wishes to submit a compute job to our HPC cluster, it is important to consider how their data will be read and written by the compute nodes assigned to the job. For example, the Lustre file system which provides our 1.4 PB storage array, `/hyrule/`, is not well optimized to read and then write lots of small files remotely. Instead, it is designed to safely store large data sets with lowered possibilities of "bit rot" and mechanical failures of the contained hard-disks.
 
-As such, we provide all users of our **Link HPC** with a bit of computing **"scratch space"** located at `$SCRATCH` (colloquially, it is referred to as *Lorule*). This is an NFS mounted storage array with a total capacity of **~150 TB** in RaidZ-1. Connected over our high-bandwidth SAS, we regularly get about 575-676 MB/s of sustained read-write IO speeds. Currently, we do not have a limit to 
+As such, we provide all users of our **Link HPC** with a bit of computing **"scratch space"** located at `$SCRATCH` (colloquially, it is referred to as *Lorule*). This is an NFS mounted storage array with a total capacity of **~150 TB** in RaidZ-1. Connected over our high-bandwidth SAS, we regularly get about 575-676 MB/s of sustained read-write IO speeds. Currently, we do not have a limit for individual members. However, as a rule, nothing is backed up in `$SCRATCH` and can last for no longer than 6-months on these disks. 
 
 ### WVU-Acquired Observatory Data
 
