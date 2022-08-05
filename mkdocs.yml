@@ -75,4 +75,5 @@ copyright: Copyright &copy; 2022 Center for Gravitational Waves and Cosmology @ 
 nav:
   - Home: index.md
   - Quick Start: quick-start.md
+  - Storage: Storage.md
   - Support: https://support.nanograv.org/desk
