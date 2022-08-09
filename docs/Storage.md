@@ -10,6 +10,9 @@ Our data-storage offerings at GWaC are quite extensive, currently well over 2.5 
 !!! note "An Aside on Data Storage Etiquette"
     These systems are shared by well over 100 active users, so it is important to practice proper data storage etiquette when using our offerings. We recommend reviewing ["Ten Simple Rules for Digital Data Storage"](https://doi.org/10.1371/journal.pcbi.1005097) (Hart et al, 2016) for a comprehensive guide on how to ensure your data is properly stored, categorized, and shared to increase collaborative productivity.
 
+------
+
+
 ### Personal "Home" Storage
 
 We currently offer users two tiers of storage when it comes to personal file storage on our resources. By default, all users have their `$HOME` (IE: `~/`) directory limited to a maximum size of 20 GB. This can be upgraded to a new maximum of 150 GB of storage should sufficient need be demonstrated to Site Administrators along with PI approval.
@@ -24,11 +27,17 @@ Due to the internal openness of our data services and size limitations, digital 
 !!! note "For Legacy Users of Bowser"
 ​    Users whom previously used the Bowser HPC will find their old home directories located at `/bowser/`. These directories are readable by everyone, but are meant for fetching old data only and will be available until January 15th, 2023 when data will then be move to magnetic tape for long term storage.
 
+------
+
+
 ### Compute Storage
 
 Whenever a user wishes to submit a compute job to our HPC cluster, it is important to consider how their data will be read and written by the compute nodes assigned to the job. For example, the Lustre file system which provides our 1.4 PB storage array, `/hyrule/`, is not well optimized to read and then write lots of small files remotely. Instead, it is designed to safely store large data sets with lowered possibilities of "bit rot" and mechanical failures of the contained hard-disks.
 
 As such, we provide all users of our **Link HPC** with a bit of computing **"scratch space"** located at `$SCRATCH` (colloquially, it is referred to as *Lorule*). This is an NFS mounted storage array with a total capacity of **~150 TB** in RaidZ-1. Connected over our high-bandwidth SAS, we regularly get about 575-676 MB/s of sustained read-write IO speeds. Currently, we do not have a limit for individual members. However, as a rule, nothing is backed up in `$SCRATCH` and can last for no longer than 6-months on these disks.
+
+------
+
 
 ### WVU-Acquired Observatory Data
 
@@ -45,6 +54,9 @@ For projects where WVU is the leading institution, we have multiple storage opti
 | `$GREENBURST`        | `/wvu/surveys/greenburst` | Primary storage for the GreenBurst [(Surnis et al, 2019)](https://doi.org/10.1017/pasa.2019.26) FRB search survey for the GBT. | 67 TB       | 2.2 TB              |
 | `$PSC_20M`           | `/wvu/scopes/20m`         | Auxiliary storage for data collected on the 20-meter telescope at Green Bank Observatory for the Pulsar Science Collaboratory. | 65 TB       | 1.6 TB              |
 
+
+
+------
 
 
 ### NANOGrav-Acquired Observatory Data
