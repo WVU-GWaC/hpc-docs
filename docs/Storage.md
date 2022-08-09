@@ -33,10 +33,10 @@ For projects where WVU is the leading institution, we have multiple storage opti
 
     Ensure that you have the `env/wvu` module file loaded via the command `module load env/wvu` to gain access to these environment variable short-cuts to various directories.
 
-| Environment Variable | Directory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 | Description                                                  | Total Limit | Currently Available |
+| Environment Variable | Directory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 | Description                                                  | Total Limit | Currently Available |
 | -------------------- | ------------------------- | ------------------------------------------------------------ | ----------- | ------------------- |
 | `$GREENBANK`         | `/wvu/scopes/gbo`         | Primary storage for observational data transferred from the Green Bank Observatory (GBO) related to WVU-centric projects. | 211 TB      | 31 TB               |
-| `$DRIFTSCAN`         | `/wvu/surveys/driftscan`  | Primary storage for the GBT 350-MHz Drift Scan Pulsar Survey [(Crowter et al, 2020)](https://doi.org/10.1093/mnras/staa933). | 134         | 12 TB               |
+| `$DRIFTSCAN`         | `/wvu/surveys/driftscan`  | Primary storage for the GBT 350-MHz Drift Scan Pulsar Survey [(Crowter et al, 2020)](https://doi.org/10.1093/mnras/staa933). | 134 TB        | 12 TB               |
 | `$GREENBURST`        | `/wvu/surveys/greenburst` | Primary storage for the GreenBurst [(Surnis et al, 2019)](https://doi.org/10.1017/pasa.2019.26) FRB search survey for the GBT. | 67 TB       | 2.2 TB              |
 | `$PSC_20M`           | `/wvu/scopes/20m`         | Auxiliary storage for data collected on the 20-meter telescope at Green Bank Observatory for the Pulsar Science Collaboratory. | 65 TB       | 1.6 TB              |
 
