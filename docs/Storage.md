@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 ## Overview of Storage Offerings
 
 Our data-storage offerings at GWaC are quite extensive, currently well over 2.5 Petabytes of "spinning" (ie: accessible) data. These systems all use a wide variety of protocols to optimize their desired use case, so its important to understand the structure of our offerings before running any compute jobs.
