@@ -30,9 +30,10 @@ As such, we provide all users of our **Link HPC** with a bit of computing **"scr
 For projects where WVU is the leading institution, we have multiple storage options available. These are all located within the `/wvu/` directory on the **Link HPC**. A breakdown of currently available storage locations and their description follows:
 
 !!! note "Regarding Environment Variables"
-​    Ensure that you have the `env/wvu` module file loaded via the command `module load env/wvu` to gain access to these environment variable short-cuts to various directories.
 
-| Environment Variable | Directory                 | Description                                                  | Total Limit | Currently Available |
+    Ensure that you have the `env/wvu` module file loaded via the command `module load env/wvu` to gain access to these environment variable short-cuts to various directories.
+
+| Environment Variable | Directory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 | Description                                                  | Total Limit | Currently Available |
 | -------------------- | ------------------------- | ------------------------------------------------------------ | ----------- | ------------------- |
 | `$GREENBANK`         | `/wvu/scopes/gbo`         | Primary storage for observational data transferred from the Green Bank Observatory (GBO) related to WVU-centric projects. | 211 TB      | 31 TB               |
 | `$DRIFTSCAN`         | `/wvu/surveys/driftscan`  | Primary storage for the GBT 350-MHz Drift Scan Pulsar Survey [(Crowter et al, 2020)](https://doi.org/10.1093/mnras/staa933). | 134         | 12 TB               |
@@ -46,7 +47,8 @@ For projects where WVU is the leading institution, we have multiple storage opti
 For projects related to the NANOGrav PFC, we have one centeral storage offering, located at `/nanograv/` on the **Link HPC**. In principal, it is created from several JBODs all mounted within this central directory. A breakdown of currently available storage locations  and their description follows:
 
 !!! note "Regarding Environment Variables"
-​    Ensure that you have the `env/nanograv` module file loaded via the command `module load env/nanograv` to gain access to these environment variable short-cuts to various directories.
+
+    Ensure that you have the `env/nanograv` module file loaded via the command `module load env/nanograv` to gain access to these environment variable short-cuts to various directories.
 
 | Environment Variable | Directory                  | Description                                                  | Total Limit | Currently Available |
 | -------------------- | -------------------------- | ------------------------------------------------------------ | ----------- | ------------------- |

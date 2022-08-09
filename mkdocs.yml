@@ -32,6 +32,7 @@ theme:
 #  - stylesheets/extra.css
 
 markdown_extensions:
+  - tables
   - admonition
   - pymdownx.details
   - pymdownx.superfences
