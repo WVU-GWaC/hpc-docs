@@ -55,7 +55,7 @@ Should you need to do any development work, you can create your own environment 
 
 ```
 conda deactivate
-mamba create --name ${USER} --prefix=/minish/${USER}/CondaEnv --clone pulsar
+conda create --name ${USER} --clone pulsar
 conda activate ${USER}
 ```
 
@@ -63,7 +63,7 @@ This will:
 
 - deactivate the `pulsar` environment
 
-- create your own personal `conda` environment (located in ~/CondaEnv) which is a clone of `pulsar`
+- create your own personal `conda` environment (located in ~/.conda/envs/${USER}) which is a clone of `pulsar`
 
 - activate your personal `conda` environment.
 
