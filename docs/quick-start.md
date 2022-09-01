@@ -5,9 +5,11 @@ hide:
 
 ## For Pulsar-Related Science ...
 
-Once connected to **Link HPC** using your WVUID, you will need to edit your `~/.bash_profile` file. To make things easy on our users, we have created a script which will automatically set up your default shell environment for pulsar-related science.
+Once connected to **Link HPC** using your WVUID, you will need to edit your `~/.bash_profile` file. 
 
-You can activate this script by running the following command:
+However, to make things easy on our users, we have created a script which will automatically set up your default shell environment for pulsar-related science.
+
+You can activate this script by running the following command (DO NOT ADD THIS TO YOUR `~/.bashrc` or `~/.bash_profile`; SIMPLY RUN THE COMMAND FROM TERMINAL):
 
 ``` shell
 source /scripts/SetUp_PulsarEnv.sh
