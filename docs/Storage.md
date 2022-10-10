@@ -87,13 +87,22 @@ We have included some basic solutions to specific use cases in the subsections b
 
 #### Transferring FROM a Remote Server TO GWaC Storage
 
-Run the following command, replacing: `$WVU_USERNAME` with your WVU Username, `$LOCAL_FILE_LOCATION` with the absolute path to the files on the remote machine, and `$GWaC_FILE_LOCATION` with the absolute path of where the files will live at on GWaC Storage.
+Run the following command, replacing: 
+  - `$WVU_USERNAME` with your WVU Username
+  - `$LOCAL_FILE_LOCATION` with the absolute path to the files on the remote machine
+  - `$GWaC_FILE_LOCATION` with the absolute path of where the files will live at on GWaC Storage.
+
 ```bash
 rsync -avz --progress -e "ssh $WVU_USERNAME@ssh.wvu.edu ssh" $LOCAL_FILE_LOCATION $WVU_USERNAME@link.phys.wvu.edu:$GWaC_FILE_LOCATION
 ```
 
 #### Transferring FROM GWaC Storage TO a Remote Server
-Run the following command, replacing: `$REMOTE_USERNAME` with your WVU Username, `$GWaC_FILE_LOCATION` with the absolute path of where the files live at on GWaC Storage, `REMOTE_SERVER_URL` with the remote server's URL, and `$REMOTE_FILE_LOCATION` with the absolute path to the where the files will be transferred to on the remote machine.
+Run the following command, replacing: 
+  - `$REMOTE_USERNAME` with your WVU Username
+  - `$GWaC_FILE_LOCATION` with the absolute path of where the files live at on GWaC Storage
+  - `$REMOTE_SERVER_URL` with the remote server's URL
+  - `$REMOTE_FILE_LOCATION` with the absolute path to the where the files will be transferred to on the remote machine.
+
 ```bash
 rsync -avz --progress -e $LOCAL_FILE_LOCATION $REMOTE_USERNAME@$REMOTE_SERVER_URL:$REMOTE_FILE_LOCATION
 ```
