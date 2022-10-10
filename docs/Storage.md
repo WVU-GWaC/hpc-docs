@@ -76,3 +76,26 @@ For projects related to the NANOGrav PFC, we have one centeral storage offering,
 | `$NANO_PROJECTS`     | `/nanograv/projects`       | Primary storage for various NANOGrav-lead projects.          | 40 TB       | -                   |
 | `$NANO_SHARE`        | `/nanograv/share`          | Auxiliary storage for intermediate files necessary for a variety of on-going projects. | 3.7 TB      | -                   |
 | `$NANO_NOTEBOOK`     | `/nanograv/notebook/homes` | Primary storage for `$HOME` / `~/` directories for the [NANOGrav Jupyter Notebook Server](notebook.nanograv.org) and their users. | 2.6 TB      | -                   |
+
+------
+
+### Moving Data from an Observatory to GWaC Storage
+
+Due to security measures put in place in the Spring of 2022, all WVU machines can only be reached via SSH protocol (IE: `ssh`, `scp`, `rsync`, etc) through the dedicated SSH Gateway (`ssh.wvu.edu`). This requires Duo Two-Factor Authentication for all such opperations targetting WVU servers from remote machines. As such, it throws a bit of a wrench into what a normal user would do when transferring data from a remote site to their home institution.
+
+We have included some basic solutions to specific use cases in the subsections below.
+
+#### Transferring FROM a Remote Server TO GWaC Storage
+
+Run the following command, replacing: `$WVU_USERNAME` with your WVU Username, `$LOCAL_FILE_LOCATION` with the absolute path to the files on the remote machine, and `$GWaC_FILE_LOCATION` with the absolute path of where the files will live at on GWaC Storage.
+```bash
+rsync -avz --progress -e "ssh $WVU_USERNAME@ssh.wvu.edu ssh" $LOCAL_FILE_LOCATION $WVU_USERNAME@link.phys.wvu.edu:$GWaC_FILE_LOCATION
+```
+
+#### Transferring FROM GWaC Storage TO a Remote Server
+Run the following command, replacing: `$REMOTE_USERNAME` with your WVU Username, `$GWaC_FILE_LOCATION` with the absolute path of where the files live at on GWaC Storage, `REMOTE_SERVER_URL` with the remote server's URL, and `$REMOTE_FILE_LOCATION` with the absolute path to the where the files will be transferred to on the remote machine.
+```bash
+rsync -avz --progress -e $LOCAL_FILE_LOCATION $REMOTE_USERNAME@$REMOTE_SERVER_URL:$REMOTE_FILE_LOCATION
+```
+
+
