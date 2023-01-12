@@ -2,6 +2,27 @@
 hide:
   - navigation
 ---
+## Connecting to the Link HPC
+Users can connect to the Link HPC through two methods: SSH Clients or a Web Browser. In either case the connection URL is: link.phys.wvu.edu
+
+Regardless of the methodology, users will have to use Duo 2-Factor Authentication to access the resources, as per WVU IT Security regulations.
+
+### SSH Connections
+If you are physically on the WVU Networks (but not the WVU Guest Network), you can connect directly to **Link HPC** via your favorite SSH client or through your Unix Terminal (Linux / Mac):
+
+``` shell
+ssh -X <WVU Username>@link.phys.wvu.edu
+```
+
+However, if you are connecting from off-campus, you must enter through the WVU SSH Gateway (ssh.wvu.edu). You can do this via a SSH Tunnel:
+
+``` shell
+ssh -X <WVU Username>@ssh.wvu.edu
+ssh -X link.phys.wvu.edu
+```
+
+### Web Browser
+Regardless of where in the world you are located, you can always access our [Open OnDemand](https://openondemand.org/) instance to connect to **Link HPC** by simply visiting [https://link.phys.wvu.edu](https://link.phys.wvu.edu). You'll be directed to the SSO log-in for WVU. Once successfully authenticated, you'll be redirected to our OnDemand portal where you can launch Interactive Sessions such as a Virtual Desktop, Jupyter Notebook instance, and a terminal prompt.
 
 ## For Pulsar-Related Science ...
 
